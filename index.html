@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalorienrechner</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <div class="wrap">
+    <form onsubmit="calc(); return false">
+        <h2>Kalorien rechnen</h2>
+        <input required type="number" name="größe" id="groesse">
+        <label for="größe">Körpergröße</label>
+        <input required type="number" name="alter" id="alter">
+        <label for="alter" name="alter">Alter</label>
+        <input required type="number" name="gewicht" id="gewicht">
+        <label for="gewicht" name="gewicht">Gewicht</label>
+
+<hr>
+        <label required for="geschlecht" name="geschlecht">Geschlecht</label>
+        <div class="row">
+            <input required type="radio" name="geschlecht" id="mann">
+            <label for="mann">männlich</label>
+            <input type="radio" name="geschlecht" id="frau">
+            <label for="frau">weiblich</label>
+        </div>
+
+        <label required for="dropdown">Arbeits- und Freizeitaktivität</label>
+        <select required name="dropdown" id="optionen">
+            <option value="0.95">Schlafen</option>
+            <option value="1.2">Nur Sitzen oder Liegen</option>
+            <option value="1.5">Ausschließlich sitzende Tätigkeit mit wenig oder keiner körperlichen Aktivität in der Freizeit, z.B. Büroarbeit
+            </option>
+            <option value="1.7">Sitzende Tätigkeit mit zeitweilig gehender oder stehender Tätigkeit, z.B. Studierende, Fließbandarbeiter, Laboranten, Kraftfahrer</option>
+            <option value="1.9">Überwiegend gehende oder stehende Tätigkeit, z.B. Verkäufer, Kellner, Handwerker, Mechaniker, Hausfrauen</option>
+            <option value="2.2">Körperlich anstrengende berufliche Arbeit</option>
+        </select>
+        <button type="submit">Ausrechnen</button>
+    </form>
+    <section id="output">
+<div id="table">
+    <div id="firstcolumn">
+        <div><p>&nbsp;</p></div>
+        <div><p>Grundumsatz</p></div>
+        <div><p>Gesamtumsatz</p></div>
+    </div>
+    <div id="secondcolumn">
+        <div>kcal</div>
+        <div><p class="output-grund"></p></div>
+        <div><p class="output-gesamt"></p></div>
+    </div>
+    <div id="thirdcolumn">
+        <div>kJ</div>
+        <div><p class="output-kj-grund"></p></div>
+        <div><p class="output-kj-gesamt"></p></div>
+    </div>
+</div>
+    </section>
+</div>
+</main>
+
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
