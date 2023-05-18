@@ -10,6 +10,12 @@ html {
     accent-color: hsla(0,100%,50%,1);
 }
 
+.reverse {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+}
+
 .wrap {
     display: flex;
     align-content: center;
